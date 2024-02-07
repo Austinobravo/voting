@@ -1,6 +1,7 @@
 import { ArrowUpRightFromSquare, LocateIcon, LucideFacebook, LucideLinkedin, LucideTwitter, LucideYoutube, Mail, PhoneCall } from 'lucide-react'
 import React from 'react'
 import Image from "next/image"
+import Link from "next/link"
 const Explore = [
     {
         name: "66 Broklyn Street 30 Road. New York United States",
@@ -46,7 +47,7 @@ const Footer = () => {
             <div className='flex gap-x-7 flex-wrap md:flex-nowrap space-y-3 py-10'>
                 <div className='space-y-4'>
                     <Image src="/logo-no-background.svg" width={50} height={50} alt="logo"/>
-                    <p className='text-sm w-96'>President represented Delaware for 36 years in the U.S. Senate before becoming the 47th Vice President of the United States.</p>
+                    <p className='text-sm md:w-96 '>President represented Delaware for 36 years in the U.S. Senate before becoming the 47th Vice President of the United States.</p>
                     <div className='flex gap-x-2'>
                         <div className='border p-2 rounded-md bg-amber-500 cursor-pointer hover:bg-amber-400'>
                             <LucideFacebook  color='white'/> 
@@ -80,7 +81,7 @@ const Footer = () => {
                     <hr className='border w-20 my-2 border-amber-500'/>
                     <ul className='space-y-5'>
                         {UsefulLinks.map((details, index)=> (
-                            <li key={index}  className='flex text-sm items-center space-x-2'>{details}</li>
+                            <li key={index}  className='flex text-sm items-center space-x-2 hover:before:content-["-"] '><Link href="" className='hover:pl-1'>{details}</Link></li>
                             ))}
                     </ul>
                 </div>
@@ -89,7 +90,7 @@ const Footer = () => {
                     <hr className='border w-20 my-2 border-amber-500'/>
                     <ul className='space-y-5'>
                         {QuickLinks.map((details, index)=> (
-                            <li key={index} className='flex text-sm items-center space-x-2'>{details}</li>
+                            <li key={index}  className='flex text-sm items-center space-x-2 hover:before:content-["-"] '><Link href="" className='hover:pl-1'>{details}</Link></li>
                         ))}
                     </ul>
                 </div>

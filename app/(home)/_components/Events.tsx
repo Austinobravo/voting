@@ -15,23 +15,23 @@ const Events = () => {
                 <Star  size={15} fill='black' color='white'/>
             </div>
             <h4 className='font-bold text-3xl'>Visit Our Recent Events</h4>
-            <p className='w-[500px] mx-auto'>Excepteur sint occae cat cupidatat non proident, sunt in culpa qui officia deser unt mollit anim.</p>
+            <p className='md:w-[500px] mx-auto'>Excepteur sint occae cat cupidatat non proident, sunt in culpa qui officia deser unt mollit anim.</p>
         </div>
-        <div className='flex flex-wrap md:flex-nowrap space-y-5 gap-x-5 py-10'>
-            <div className='bg-cover w-full h-full rounded-full md:basis-1/2' style={{backgroundImage: `url(/event.jpg)`}}>
+        <div className='flex flex-wrap md:flex-nowrap  space-y-5 gap-x-5 py-10'>
+            <div className='bg-cover bg-center w-full h-96 md:h-[100vh]  rounded-full md:basis-1/2' style={{backgroundImage: `url(/event.jpg)`}}>
                 <div className='bg-black/50 rounded-md relative w-full h-full'>
                     <div className='absolute bottom-10 flex justify-center items-center mx-auto w-full gap-x-4'>
                         <div className='border-2 border-white rounded-md '>
-                            <h2 className='text-4xl px-7 text-white py-4'>00</h2>
-                            <p className='bg-white text-black text-center py-2 font-bold '>Days</p>
+                            <h2 className='text-4xl md:px-7 px-3 text-white py-4'>00</h2>
+                            <p className='bg-white text-black text-center md:py-2 py-1 font-bold '>Days</p>
                         </div>
                         <div className='border-2 border-white rounded-md '>
-                            <h2 className='text-4xl px-7 text-white py-4'>00</h2>
-                            <p className='bg-white text-black text-center py-2 font-bold '>Hours</p>
+                            <h2 className='text-4xl md:px-7 px-3 text-white py-4'>00</h2>
+                            <p className='bg-white text-black text-center md:py-2 py-1 font-bold '>Hours</p>
                         </div>
                         <div className='border-2 border-white rounded-md '>
-                            <h2 className='text-4xl px-7 text-white py-4'>00</h2>
-                            <p className='bg-white text-black text-center py-2 font-bold '>Minutes</p>
+                            <h2 className='text-4xl md:px-7 px-3 text-white py-4'>00</h2>
+                            <p className='bg-white text-black text-center md:py-2 py-1 font-bold '>Minutes</p>
                         </div>
                     </div>
 

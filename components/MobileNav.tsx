@@ -30,7 +30,21 @@ const navLinks = [
 
 const MobileNav = () => {
     const [isToggle, setIsToggle] = React.useState<boolean>(false)
+    React.useEffect(()=>{
+        const handleResize = () => {
+        if(window.innerWidth >= 756){
+            setIsToggle(false)
+        }
+
+        }
+        window.addEventListener("resize", handleResize)
+
+        return ()=> {
+            window.removeEventListener("resize", handleResize)
+        }
+    },[])
   return (
+    <>
     <div  className='absolute w-full'>
         <div className='flex px-6 pt-3 justify-between items-center'>
             
@@ -50,14 +64,14 @@ const MobileNav = () => {
                 <div className='text-white '>
                     <ul className='flex flex-col space-y-7'>
                         {navLinks.map((link, index)=> (
-                            <li key={index} className='hover:bg-slate-300 hover:font-bold  hover:text-black py-2 px-4'>
-                                <Link href={link.href}>- {link.name}</Link>
+                            <li key={index} className='hover:bg-slate-300 hover:font-bold hover:before:content-["-"] transition hover:text-black py-2 px-4'>
+                                <Link href={link.href} className='hover:pl-1'> {link.name}</Link>
                             </li>
                         ))}
                     </ul>
 
                 </div>
-                <div className='ml-auto border-2 p-2 mt-2 hover:bg-white text-black hover:rounded-sm w-fit'>
+                <div className='ml-auto border-2 p-2 mt-2 hover:bg-white/20 text-black hover:rounded-sm w-fit'>
                     <SearchButton />
                 </div>
 
@@ -66,6 +80,7 @@ const MobileNav = () => {
 
       
     </div>
+    </>
   )
 }
 
