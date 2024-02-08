@@ -8,7 +8,7 @@ const page = () => {
         <div className='bg-black/80 w-full h-36'>
             <DesktopNav/>
         </div>
-        <div className='px-20 py-12 '>
+        <div className='md:px-20 px-6 py-12 '>
             <div className='bg-blue-300 w-fit font-bold text-black opacity-80 py-1 px-3 mb-3 rounded-full'>
                 <p>Polls</p>
             </div>
