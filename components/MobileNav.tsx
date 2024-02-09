@@ -48,9 +48,9 @@ const MobileNav = () => {
     <div  className='absolute w-full'>
         <div className='flex px-6 pt-3 justify-between items-center'>
             
-            <div className=''>
+            <Link href={"/"} className=''>
                 <Image src="/logo-no-background.svg" width={80} height={100} alt='logo'/>
-            </div>
+            </Link>
             <div className='pr-7 cursor-pointer' onClick={()=>setIsToggle(!isToggle)}>
                 <Menu size={40} color='white'/>
             </div>

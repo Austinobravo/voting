@@ -10,7 +10,7 @@ const navLinks = [
     },
     {
         name: "Election",
-        href: "/election"
+        href: "/elections"
     },
     {
         name: "Polls",
@@ -29,9 +29,9 @@ const DesktopNav = () => {
   return (
     <div className='bg-transparent  w-full pt-4 absolute px-6 flex items-center'>
         <div className='flex justify-between w-full items-center'>
-            <div>
+            <Link href={"/"}>
                 <Image src="/logo-no-background.svg" width={80} height={100} alt='logo'/>
-            </div>
+            </Link>
             <div>
                 <ul className='flex space-x-4'>
                     {navLinks.map((link, index)=>(
