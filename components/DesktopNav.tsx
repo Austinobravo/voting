@@ -1,7 +1,9 @@
+"use client"
 import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
 import SearchButton from './SearchButton'
+import { usePathname } from 'next/navigation'
 
 const navLinks = [
     {
@@ -26,6 +28,7 @@ const navLinks = [
     },
 ]
 const DesktopNav = () => {
+    const pathname = usePathname()
   return (
     <div className='bg-transparent  w-full pt-4 absolute px-6 flex items-center'>
         <div className='flex justify-between w-full items-center'>
@@ -36,7 +39,7 @@ const DesktopNav = () => {
                 <ul className='flex space-x-4'>
                     {navLinks.map((link, index)=>(
                         <li key={index} >
-                            <Link href={link.href} className={`${link.name === "Login" && ("bg-amber-500 px-5 py-1 text-white rounded-md")} text-white`}>{link.name}</Link>
+                            <Link href={link.href} className={`${link.name === "Login" && ("bg-amber-500 px-5 py-1 text-white rounded-md")} ${pathname.includes(link.href) && "!text-amber-500 font-bold underline"}  hover:text-amber-500 hover:font-bold text-white`}>{link.name}</Link>
                         </li>
                     ))}
                 </ul>

@@ -4,6 +4,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
 import SearchButton from './SearchButton'
+import { usePathname } from 'next/navigation'
 
 const navLinks = [
     {
@@ -30,6 +31,7 @@ const navLinks = [
 
 const MobileNav = () => {
     const [isToggle, setIsToggle] = React.useState<boolean>(false)
+    const pathname = usePathname()
     React.useEffect(()=>{
         const handleResize = () => {
         if(window.innerWidth >= 756){
@@ -65,7 +67,7 @@ const MobileNav = () => {
                     <ul className='flex flex-col space-y-7'>
                         {navLinks.map((link, index)=> (
                             <li key={index} className='hover:bg-slate-300 hover:font-bold hover:before:content-["-"] transition hover:text-black py-2 px-4'>
-                                <Link href={link.href} className='hover:pl-1'> {link.name}</Link>
+                                <Link href={link.href} className={`${link.name === "Login" && ("bg-amber-500 px-5 py-1 text-white rounded-md")} ${pathname.includes(link.href) && "!text-amber-500 font-bold underline"}  hover:text-amber-500 hover:font-bold text-white`}>{link.name}</Link>
                             </li>
                         ))}
                     </ul>
