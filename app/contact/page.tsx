@@ -28,14 +28,14 @@ const page = () => {
         </div>
         <div>
             <div className='text-center mt-7 space-y-2 py-10'>
-                <h2 className='text-4xl font-bold'>Have to join with us?</h2>
+                <h2 className='md:text-4xl text-xl font-bold'>Have to join with us?</h2>
                 <blockquote className='text-sm font-semibold opacity-70'>"Do you want to stay updated with us"</blockquote>
             </div>
             <div>
-                <div className='md:px-20 px-6 flex flex-wrap md:flex-nowrap gap-x-20 '>
+                <div className='md:px-20 px-6 flex flex-wrap md:flex-nowrap gap-x-20 gap-10  '>
                     <div className='md:basis-1/4 space-y-7'>
                         <div>
-                            <h3 className='text-2xl font-extrabold'>Frequently Asked Questions</h3>
+                            <h3 className='md:text-2xl text-xl font-extrabold'>Frequently Asked Questions</h3>
                             <p>Reach out to us with your frequently asked question</p>
                         </div>
                         <div className=' space-y-4'>
@@ -59,7 +59,7 @@ const page = () => {
                     </div>
                     
                     <div className='w-full md:basis-2/3'>
-                        <h3 className='font-bold text-lg'>Leave the message here</h3>
+                        <h3 className='font-bold text-lg mb-3'>Leave the message here</h3>
                         <form className='w-full space-y-3 '>
                             <div className='flex gap-x-4'>
                                 <div className='border  border-amber-500 w-full rounded-md'>
