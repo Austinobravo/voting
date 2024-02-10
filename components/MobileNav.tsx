@@ -61,7 +61,7 @@ const MobileNav = () => {
     }, [])
   return (
     <>
-    <div  className={` w-full ${isNavFixed ? "fixed bg-black/80 bg-gradient-to-r from-slate-600 z-20" : "absolute z-20"}`}>
+    <div  className={` w-full ${isNavFixed ? "fixed bg-black/80 bg-gradient-to-r from-slate-600 z-20" : "absolute z-20"}`} style={{transform: `translateY(${isNavFixed ? "-5px": 0})`, transition: "transform 1s ease"}}>
         <div className='flex px-6 pt-3 justify-between items-center'>
             
             <Link href={"/"} className=''>

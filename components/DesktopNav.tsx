@@ -46,7 +46,7 @@ const DesktopNav = () => {
     }, [])
     
   return (
-     <div className={` w-full px-6 flex  items-center ${isNavFixed ? 'fixed bg-black/70 top-0 left-0 transition-transform duration-800 transform translate-y-0' : 'bg-transparent absolute'}`}>
+     <div className={` w-full px-6 py-7 flex  items-center ${isNavFixed ? 'fixed bg-black/70 ' : 'bg-transparent absolute'}`} style={{transform: `translateY(${isNavFixed ? "-10px": 0})`, transition: "transform 1s ease"}}>
             <div className='flex justify-between w-full items-center'>
                 <Link href={"/"}>
                     <Image src="/logo-no-background.svg" width={80} height={100} alt='logo'/>
