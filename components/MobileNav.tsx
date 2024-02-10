@@ -31,6 +31,7 @@ const navLinks = [
 
 const MobileNav = () => {
     const [isToggle, setIsToggle] = React.useState<boolean>(false)
+    const [isNavFixed, setIsNavFixed] = React.useState<boolean>(false)
     const pathname = usePathname()
     React.useEffect(()=>{
         const handleResize = () => {
@@ -45,9 +46,22 @@ const MobileNav = () => {
             window.removeEventListener("resize", handleResize)
         }
     },[])
+
+    React.useEffect(()=> {
+        const handleScroll = () => {
+            const heroSection = document.getElementById("hero")
+            if(heroSection){
+                setIsNavFixed(window.scrollY > heroSection.offsetHeight)
+            }
+        }
+        window.addEventListener("scroll", handleScroll)
+        return () => {
+            window.removeEventListener("scroll", handleScroll)
+        }
+    }, [])
   return (
     <>
-    <div  className='absolute w-full'>
+    <div  className={` w-full ${isNavFixed ? "fixed bg-black/80 bg-gradient-to-r from-slate-600 z-20" : "absolute z-20"}`}>
         <div className='flex px-6 pt-3 justify-between items-center'>
             
             <Link href={"/"} className=''>

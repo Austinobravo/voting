@@ -2,7 +2,7 @@ import React from 'react'
 
 const Hero = () => {
   return (
-    <div className='w-full h-[600px] bg-center w- bg-cover   bg-gradient-to-r from-indigo-500 ' style={{backgroundImage: `url(/bgHero.jpg) `}}>
+    <div id='hero' className='w-full h-[600px] bg-center w- bg-cover   bg-gradient-to-r from-indigo-500 ' style={{backgroundImage: `url(/bgHero.jpg) `}}>
         <div className=' bg-gradient-to-r flex flex-col md:w-[600px] justify-center space-y-7 items-left px-7  from-slate-500 h-[600px]'>
             <h2 className='text-amber-500 md:text-xl text-sm font-bold'>WE ARE ROOTING FOR YOU</h2>
             <h3 className='md:text-5xl text-4xl text-white leading-snug'>Let's Make The World Great Again</h3>
